@@ -1,0 +1,43 @@
+@media screen and (min-width: 768px) {
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "ogcheese smokeybacon"
+            "nashvillechicken realburger"
+            "realimpossible";
+
+            grid-template-areas:
+            "fries cheesefries";
+
+            grid-template-areas:
+            "chicken chicken";
+
+            grid-template-areas:
+            "coke raspberry"
+            "lemonade peach";
+    }
+
+    #ogcheese {
+        grid-area: ogcheese;
+    }
+
+    #smokeybacon {
+        grid-area: smokeybacon;
+    }
+
+    #nashvillechicken {
+        grid-area: nashvillechicken;
+    }
+
+    #realburger {
+        grid-area: realburger;
+    }
+
+    #realimpossible {
+        grid-area: realimpossible;
+    }
+
+    //  end of media query   
+}

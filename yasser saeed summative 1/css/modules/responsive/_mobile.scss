@@ -1,0 +1,262 @@
+body {
+  background: $white;
+  color: $teal;
+  align-items: center;
+}
+
+#logo-box {
+  text-align: center;
+  width: 100%;
+}
+
+#logo {
+  border: none;
+  min-width: 110px;
+  min-height: 140px;
+  position: relative;
+  top: 15;
+  left: 0;
+}
+
+a {
+  font-family: $head-font;
+  font-size: $index-font;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: $teal;
+  position: relative;
+  top: 21px;
+}
+
+h1 {
+  font-family: $head-font;
+  font-size: $big-font;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  top: 14px;
+}
+
+h2 {
+  font-family: $main-font;
+  font-size: $med-font;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: $sub-font;
+  font-size: $small-font;
+  max-width: 90%;
+}
+
+h3 {
+  font-family: $main-font;
+  font-size: $small-font;
+  position: absolute;
+  right: 4px;
+  bottom: 0px;
+}
+
+img {
+  width: 109px;
+  height: 109px;
+  border: 3px solid $teal;
+  border-radius: 7px;
+  position: relative;
+  top: -3px;
+  left: -3px;
+}
+
+main {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+ul {
+  margin-bottom: 70px;
+  list-style: none;
+}
+
+//back
+
+#back {
+  text-decoration: none;
+  color: #00b2ad;
+  position: relative;
+  top: 20px;
+  left: 2.5%;
+
+  img {
+    width: 30px;
+    height: 26px;
+    position: absolute;
+    z-index: 99;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+//order
+
+.item,
+.order-button {
+  display: flex;
+  border: 3px solid $teal;
+  border-radius: 10px;
+  max-width: 95%;
+  max-height: 109px;
+  margin: 0px 2.5% 20px 2.5%;
+  position: relative;
+}
+
+.order-button {
+  background: $teal;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 10;
+
+  a {
+    color: $white;
+    position: relative;
+    top: 0;
+    font-size: $order-font;
+  }
+}
+
+#order-review {
+  min-height: 500px;
+}
+
+#table h2 {
+    text-align: center;
+    width: 100%;
+}
+
+#order-review,
+#table {
+  display: flex;
+  border: 3px solid $teal;
+  border-radius: 10px;
+  max-width: 95%;
+  margin: 0px 2.5% 20px 2.5%;
+  padding: 10px;
+
+  .order-item {
+    grid-area: order-item;
+  }
+
+  .order-options {
+    grid-area: order-options;
+  }
+
+  .add {
+    grid-area: add;
+  }
+
+  .remove {
+    grid-area: remove;
+  }
+
+  .add,
+  .remove {
+    height: 32px;
+    width: 32px;
+    border: none;
+    margin: auto;
+  }
+
+  .order-quantity {
+    grid-area: order-quantity;
+    text-align: center;
+  }
+
+  .order-price {
+    grid-area: order-price;
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .order-entry {
+    width: 100%;
+    height: 2em;
+    display: grid;
+    grid-template-columns: 70% 1fr 1fr 1fr;
+    grid-template-areas:
+      "order-item remove order-quantity add"
+      "order-options . order-price .";
+  }
+}
+
+// responsive
+
+// Options cut content
+
+.options {
+    // cut
+    // border: 3px solid $teal;
+    // border-radius: 10px;
+    // max-width: 95%;
+    // margin: 0px 2.5% 20px 2.5%;
+    // cut
+
+    display: none;
+
+    background: $white;
+    z-index: 5;
+    width: 100%;
+    position: absolute;
+    top: 98px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "single double"
+        "onepiece twopiece"
+        "bacon customise"
+        "hot nothot";
+
+    div {
+        margin: 10px;
+        border: $teal solid 3px;
+        border-radius: 7px;
+        color: $teal;
+        background: $white;
+        text-align: center;
+    }
+
+    .single {grid-area: single;}
+
+    .double {grid-area: double;}
+
+    .onepiece {grid-area: onepiece}
+
+    .twopiece {grid-area: twopiece}
+
+    .bacon {
+        grid-area: bacon;
+        background: $teal;
+        color: $white;
+    }
+
+    .customise {grid-area: customise;}
+
+    .hot {
+        grid-area: hot;
+        border: $red solid 3px;
+        background: $red;
+
+    }
+
+    .nothot {
+        grid-area: nothot;
+        border: $red solid 3px;
+        color: $red;
+    }
+}
+

@@ -1,0 +1,35 @@
+// fonts
+
+$head-font: "BunkenTechSansPro-ExBd", sans-serif;
+$main-font: "Glaschu-ExtraBold", sans-serif;
+$sub-font: "BarlowCondensed-Light", sans-serif;
+
+@font-face {
+  font-family: "BunkenTechSansPro-ExBd";
+  src: url(/fonts/BunkenTechSansPro-ExBd.ttf) format("TrueType");
+  font-style: normal;
+}
+
+  @font-face {
+    font-family: "Glaschu-ExtraBold";
+    src: url(/fonts/Glaschu-ExtraBold.ttf) format("TrueType");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BarlowCondensed-Light";
+    src: url(/fonts/BarlowCondensed-Light.ttf) format("TrueType");
+    font-style: normal;
+}
+
+// font sizes
+$index-font: 70px;
+$big-font: 48px;
+$med-font: 24px;
+$small-font: 18px;
+$order-font: 36px;
+
+// colors
+$white: #FDF9F6;
+$red: #EF402A;
+$teal: #00B2AD;

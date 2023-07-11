@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "BunkenTechSansPro-ExBd";
+  src: url(/fonts/BunkenTechSansPro-ExBd.ttf) format("TrueType");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Glaschu-ExtraBold";
+  src: url(/fonts/Glaschu-ExtraBold.ttf) format("TrueType");
+  font-style: normal;
+}
+@font-face {
+  font-family: "BarlowCondensed-Light";
+  src: url(/fonts/BarlowCondensed-Light.ttf) format("TrueType");
+  font-style: normal;
+}
+body {
+  background: #FDF9F6;
+  color: #00B2AD;
+  align-items: center;
+}
+
+#logo-box {
+  text-align: center;
+  width: 100%;
+}
+
+#logo {
+  border: none;
+  min-width: 110px;
+  min-height: 140px;
+  position: relative;
+  top: 15;
+  left: 0;
+}
+
+a {
+  font-family: "BunkenTechSansPro-ExBd", sans-serif;
+  font-size: 70px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: #00B2AD;
+  position: relative;
+  top: 21px;
+}
+
+h1 {
+  font-family: "BunkenTechSansPro-ExBd", sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  top: 14px;
+}
+
+h2 {
+  font-family: "Glaschu-ExtraBold", sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "BarlowCondensed-Light", sans-serif;
+  font-size: 18px;
+  max-width: 90%;
+}
+
+h3 {
+  font-family: "Glaschu-ExtraBold", sans-serif;
+  font-size: 18px;
+  position: absolute;
+  right: 4px;
+  bottom: 0px;
+}
+
+img {
+  width: 109px;
+  height: 109px;
+  border: 3px solid #00B2AD;
+  border-radius: 7px;
+  position: relative;
+  top: -3px;
+  left: -3px;
+}
+
+main {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+ul {
+  margin-bottom: 70px;
+  list-style: none;
+}
+
+#back {
+  text-decoration: none;
+  color: #00b2ad;
+  position: relative;
+  top: 20px;
+  left: 2.5%;
+}
+#back img {
+  width: 30px;
+  height: 26px;
+  position: absolute;
+  z-index: 99;
+  border: none;
+  border-radius: 0;
+}
+
+.item,
+.order-button {
+  display: flex;
+  border: 3px solid #00B2AD;
+  border-radius: 10px;
+  max-width: 95%;
+  max-height: 109px;
+  margin: 0px 2.5% 20px 2.5%;
+  position: relative;
+}
+
+.order-button {
+  background: #00B2AD;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: 10;
+}
+.order-button a {
+  color: #FDF9F6;
+  position: relative;
+  top: 0;
+  font-size: 36px;
+}
+
+#order-review {
+  min-height: 500px;
+}
+
+#table h2 {
+  text-align: center;
+  width: 100%;
+}
+
+#order-review,
+#table {
+  display: flex;
+  border: 3px solid #00B2AD;
+  border-radius: 10px;
+  max-width: 95%;
+  margin: 0px 2.5% 20px 2.5%;
+  padding: 10px;
+}
+#order-review .order-item,
+#table .order-item {
+  grid-area: order-item;
+}
+#order-review .order-options,
+#table .order-options {
+  grid-area: order-options;
+}
+#order-review .add,
+#table .add {
+  grid-area: add;
+}
+#order-review .remove,
+#table .remove {
+  grid-area: remove;
+}
+#order-review .add,
+#order-review .remove,
+#table .add,
+#table .remove {
+  height: 32px;
+  width: 32px;
+  border: none;
+  margin: auto;
+}
+#order-review .order-quantity,
+#table .order-quantity {
+  grid-area: order-quantity;
+  text-align: center;
+}
+#order-review .order-price,
+#table .order-price {
+  grid-area: order-price;
+  position: relative;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+#order-review .order-entry,
+#table .order-entry {
+  width: 100%;
+  height: 2em;
+  display: grid;
+  grid-template-columns: 70% 1fr 1fr 1fr;
+  grid-template-areas: "order-item remove order-quantity add" "order-options . order-price .";
+}
+
+.options {
+  display: none;
+  background: #FDF9F6;
+  z-index: 5;
+  width: 100%;
+  position: absolute;
+  top: 98px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "single double" "onepiece twopiece" "bacon customise" "hot nothot";
+}
+.options div {
+  margin: 10px;
+  border: #00B2AD solid 3px;
+  border-radius: 7px;
+  color: #00B2AD;
+  background: #FDF9F6;
+  text-align: center;
+}
+.options .single {
+  grid-area: single;
+}
+.options .double {
+  grid-area: double;
+}
+.options .onepiece {
+  grid-area: onepiece;
+}
+.options .twopiece {
+  grid-area: twopiece;
+}
+.options .bacon {
+  grid-area: bacon;
+  background: #00B2AD;
+  color: #FDF9F6;
+}
+.options .customise {
+  grid-area: customise;
+}
+.options .hot {
+  grid-area: hot;
+  border: #EF402A solid 3px;
+  background: #EF402A;
+}
+.options .nothot {
+  grid-area: nothot;
+  border: #EF402A solid 3px;
+  color: #EF402A;
+}
+
+@media screen and (min-width: 768px) {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "ogcheese smokeybacon" "nashvillechicken realburger" "realimpossible";
+    grid-template-areas: "fries cheesefries";
+    grid-template-areas: "chicken chicken";
+    grid-template-areas: "coke raspberry" "lemonade peach";
+  }
+  #ogcheese {
+    grid-area: ogcheese;
+  }
+  #smokeybacon {
+    grid-area: smokeybacon;
+  }
+  #nashvillechicken {
+    grid-area: nashvillechicken;
+  }
+  #realburger {
+    grid-area: realburger;
+  }
+  #realimpossible {
+    grid-area: realimpossible;
+  }
+}/*# sourceMappingURL=main.css.map */
